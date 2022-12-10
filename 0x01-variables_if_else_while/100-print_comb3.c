@@ -21,7 +21,7 @@ int main(void)
 			{
 				putchar(tens);
 				putchar(ones);
-				if (!(ones == '9' && tens == 'g'))/*addes comma and space*/
+				if (!(ones == '9' && tens == 'g'))/*add comma and space*/
 				{
 					putchar(',');
 					putchar(' ');
