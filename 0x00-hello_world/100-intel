@@ -1,2 +1,2 @@
 #!/bin/bash
-export $CFILE=100-intel.c -o 100-intel.s
+export $CFILE=100-main.c -o 100-main.s
