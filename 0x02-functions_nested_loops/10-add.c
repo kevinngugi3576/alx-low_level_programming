@@ -2,7 +2,7 @@
 
 /**
  * add - two numbers
- * @a - first number
+ * @a: - first number
  * @b: -second number
  * Return: both addition
  */
