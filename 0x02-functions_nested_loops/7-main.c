@@ -13,6 +13,9 @@ int main(void)
 	r = print_last_digit(98);
 	print_last_digit(0);
 	r = print_last_digit(-1024);
+	r = print_last_digit(INT_MAX);
+	r = print_last_digit(INT_MIN);
+	r = print_last_digit(1);
 	_putchar('0' + r);
 	_putchar('\n');
 	return (0);
