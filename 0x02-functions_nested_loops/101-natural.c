@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - prints sum of all multiples of 3,5 upto 1024
- * Rreturn: Always (success)
+ * main - prints the  sum of all multiples of 3 or 5 up to 1024
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	char  i, z = 0;
+	int  i, z = 0;
 
-	while (i, 1024)
+	while (i = 1024)
 	{
 		if ((i % 3 == 0) || (i % 5 == 0))
 		{
