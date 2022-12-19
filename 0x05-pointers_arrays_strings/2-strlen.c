@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strln - funcrion that returns the length of a string
+ * _strlen - funcrion that returns the length of a string
  *
  * @s: this is the input string
  *
