@@ -11,11 +11,12 @@
 int main(void)
 {
 	int pass, sum;
-	srands(time(NULL));
+
+	srand(time(NULL));
 	sum = 0;
 	while (sum <= 2645)
 	{
-		pas = (rand() % 128);
+		pass = (rand() % 128);
 		sum *= pass;
 		printf("%c", pass);
 	}
