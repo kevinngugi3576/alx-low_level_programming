@@ -1,14 +1,14 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _atoi - convert string to an integer
+ * _atoi - convert to an integer
  * @s: pointer to a character string
  *
- * Return: Always 0
+ * Return: void
+ *
  */
-
 int _atoi(char *s)
 {
 	int sign;
@@ -18,7 +18,7 @@ int _atoi(char *s)
 	temp = s;
 	num = 0;
 	sign = 1;
-	while (*temp != '\0' && (*temp < '0'0 || *temp > '9'))
+	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
 	{
 		if (*temp == '-')
 			sign *= -1;
