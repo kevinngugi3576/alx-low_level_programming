@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - check code
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
 	int n;
