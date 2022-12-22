@@ -1,1 +1,1 @@
-More pointers, arrays and strings
+arrays
