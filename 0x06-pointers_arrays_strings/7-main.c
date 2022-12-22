@@ -14,4 +14,4 @@ int main(void)
 	p = leet(s);
 	printf("%s", p);
 	printf("%s", s);
-	eturn (0);
+	return (0);
