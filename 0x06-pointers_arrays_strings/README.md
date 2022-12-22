@@ -1,1 +1,1 @@
-arrays
+ corrections on more pointers
