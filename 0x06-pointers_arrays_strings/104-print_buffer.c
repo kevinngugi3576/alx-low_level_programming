@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_buffer - prints buffer 10 bytes at a time starting with byte
- * position then showing next content 
+ * print_buffer - prints a buffer 10 starting with
+ * byte position, content then displays printable characters
  * @b: buffer to be printed
  * @size: number of bytes to be printed from buffer
  */
@@ -23,7 +23,7 @@ void print_buffer(char *b, int size)
 			else
 				printf("%82x", *(b + index + byte));
 
-			if ((index % 2) !=0 && index != 0)
+			if ((index % 2) != 0 && index != 0)
 				printf(" ");
 		}
 
