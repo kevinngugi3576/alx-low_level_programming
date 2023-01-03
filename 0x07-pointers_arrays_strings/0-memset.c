@@ -1,21 +1,20 @@
-#include "main.c"
+#include "main.h"
 /**
  * _memset - fills first bytes of memoryry pointed by @s with constant @c
  * @s: A pointer to memory
- * @c: Character to fill the memory
+ * @b: Character to fill the memory
  * @n: bytes filled
  * description _memset: over there
  *
  * Return: Pointer to filled memory area @s
  */
 
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int indeex;
-	unsigned char *memory = s, value = c;
+	unsigned int index;
 
 	for (index = 0; index < n; index++)
-		memory[index] = value;
+		s[index] = b;
 
-	return (memory);
+	return (s);
 }
