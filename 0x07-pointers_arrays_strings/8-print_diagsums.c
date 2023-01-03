@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * print_digsums - prints sum of diagonals of asquare matrix of integers
+ * print_diagsums - prints sum of diagonals of asquare matrix of integers
  * @a: matrix of integers
  * @size: size of matrix
  *
  * Return: always 0 (success)
  */
 
-void print_digsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int index, sum1 = 0, sum2 = 0;
 
