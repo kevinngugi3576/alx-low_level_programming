@@ -3,30 +3,25 @@
 
 /**
  * is_palindrome - function that returns a string if its palindrome
- * @s: the string to be checked
- * 
+ * @s: the string to be checke
  * Return: length of string
  *
  */
 
-int is _palindrome(char *s)
+int is_palindrome(char *s)
 {
 	int len = strlen(s);
+	int i = 0;
+	int j = 0;
 
 	if (len == 0)
 	{
-		return 1;
+		return (1);
 	}
-
-	int i = 0;
-	int j = len - 1;
-
-	while (i < j)
-
 	{
 		if (s[i] != s[j])
 		{
-			return 0;
+			return (0);
 		}
 
 		i++;
@@ -34,6 +29,6 @@ int is _palindrome(char *s)
 		j--;
 	}
 
-	return 1;
+	return (1);
 
 }
