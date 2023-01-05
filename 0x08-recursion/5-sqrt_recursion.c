@@ -17,11 +17,21 @@ int _sqrt_recursion(int n)
 
 	else if (n == 0 || n == 1)
 	{
-		return (n);
+		return (1);
 	}
 
 	else
 	{
-		return (n);
+		int i;
+
+		for (i = 1; i <= n / 2; i++)
+		{
+			if (i * i == n)
+			{
+				return (i);
+			}
+		}
+
+		return (n - 1);
 	}
 }
