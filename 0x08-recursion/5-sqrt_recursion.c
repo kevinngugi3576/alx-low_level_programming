@@ -22,16 +22,6 @@ int _sqrt_recursion(int n)
 
 	else
 	{
-		int i;
-
-		for (i = 1; i <= n / 2; i++)
-		{
-			if (i * i == n)
-			{
-				return (i);
-			}
-		}
-
-		return (n - 1);
+		return (1);
 	}
 }
