@@ -1,1 +1,1 @@
-sstatic libraries
+static_libra
