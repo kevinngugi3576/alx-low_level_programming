@@ -31,10 +31,11 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			j++;
-		}
-
-		result += atoi(argv[i]);
 	}
+		result += atoi(argv[i]);
+		i++;
+	}
+
 
 	printf("%d\n", result);
 
