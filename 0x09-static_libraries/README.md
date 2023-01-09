@@ -1,0 +1,1 @@
+sstatic libraries
