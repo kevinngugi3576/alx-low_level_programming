@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 			}
 			j++;
 	}
-		result += atoi(argv[i]);
+		result + atoi(argv[i]);
 		i++;
 	}
 
