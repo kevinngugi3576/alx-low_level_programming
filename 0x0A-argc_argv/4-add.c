@@ -17,10 +17,10 @@ int main(int argc, char *argv[])
 	int result = 0;
 	int i = 1;
 	int j = 0;
-	int len = strlen(argv[i]);
 
 	while (i < argc)
 	{
+		int len = strlen(argv[i]);
 
 		while (j < len)
 		{
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			j++;
-	}
+		}
 		i++;
 	}
 
