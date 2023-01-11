@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
-
+#include <stdio.h>
+#include <string.h>
 /**
  * _strlen - counts arrays
  * @s: arrays of elemnts
@@ -12,7 +13,7 @@
 int _strlen(char *s)
 {
 	unsigned int i;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -25,11 +26,11 @@ int _strlen(char *s)
 /**
  * str_concat - backs a pointer to array
  * @s1: array 1
- * @s2; array 2
+ * @s2: array 2
  * Return: alwyas an array dynamic
  */
 
-char *str_concat(char *s1; char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *dst;
 	unsigned int i, j, size;
@@ -39,7 +40,7 @@ char *str_concat(char *s1; char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	size = (_strlen(s1) + _strlen(s2) +1);
+	size = (_strlen(s1) + _strlen(s2) + 1);
 
 	dst = (char *) malloc(size * sizeof(char));
 
@@ -48,14 +49,15 @@ char *str_concat(char *s1; char *s2)
 		return (NULL);
 	}
 
-	for (1 = 0; *(s1 + 1) != '\0'; i++)
+	for (i = 0; *(s1 + 1) != '\0'; i++)
 		*(dst + i) = *(s1 + i);
 
 	for (j = 0; *(s2 + j) != '\0'; j++)
 	{
-		*(dst + 1) + *(s2 + j);
+		*(dst + i) = *(s2 + j);
 		i++;
 	}
+	*(dst + 1) = '\0';
 
 	return (dst);
 }
