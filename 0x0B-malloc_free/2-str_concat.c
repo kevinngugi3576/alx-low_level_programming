@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
  * _strlen - counts arrays
@@ -37,7 +39,7 @@ char *str_concat(char *s1; char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	size = (_strlen(s1) + _strle(s2) +1);
+	size = (_strlen(s1) + _strlen(s2) +1);
 
 	dst = (char *) malloc(size * sizeof(char));
 
@@ -47,7 +49,7 @@ char *str_concat(char *s1; char *s2)
 	}
 
 	for (1 = 0; *(s1 + 1) != '\0'; i++)
-		*(dst + i) = *(s1 + 1);
+		*(dst + i) = *(s1 + i);
 
 	for (j = 0; *(s2 + j) != '\0'; j++)
 	{

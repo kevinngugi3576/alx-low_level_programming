@@ -1,6 +1,9 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
+
 /**
- * alloc-grid - allocates a grid makes apace and free space
+ * alloc_grid - allocates a grid which makes space and free space
  * @width: takes in width of grid
  * @height:height of grid
  * Return: grid with freed spaces
@@ -15,7 +18,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	grid = malloc(sizeof(int 8) * height);
+	grid = malloc(sizeof(int [8]) * height);
 
 	if (grid == NULL)
 	{
@@ -28,12 +31,11 @@ int **alloc_grid(int width, int height)
 
 		if (grid[i] == NULL)
 		{
-			for (i = i -1; i >= 0; i--)
+			for (i = i - 1; i >= 0; i--)
 			{
 				free(grid[i]);
 			}
 			free(grid);
-			
 			return (NULL);
 		}
 	}
