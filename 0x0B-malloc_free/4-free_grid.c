@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 /**
  * free_grid - alloctes a grid, makes and free space
  * @grid: take in width of grid
@@ -14,5 +16,5 @@ void free_grid(int **grid, int height)
 		free(grid[i]);
 	}
 
-	return (free grid);
+	free(grid);
 }
