@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
 
 int word_len(char *str);
 int count_words(char *str);
@@ -44,8 +46,7 @@ int count_words(char *str)
 			index += word_len(str + index);
 		}
 	}
-
-	return (word);
+	return (words);
 }
 
 /**
@@ -58,7 +59,7 @@ char **strtow(char *str)
 	char **strings;
 	int index = 0, words, w, letters, l;
 
-	if (str == NULL | str[0] == '\0')
+	if ((str == (NULL)) | (str[0] == '\0'))
 		return (NULL);
 
 	words = count_words(str);
