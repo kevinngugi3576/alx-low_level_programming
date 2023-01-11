@@ -1,7 +1,10 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 
 /**
- * _stlen - counts array
+ * _strlen - counts the number of arrays in a parameter
  * @s: array of elements
  *
  * Return: on success 1
@@ -21,10 +24,11 @@ int _strlen(char *s)
 }
 
 /**
- * _strcpy  - copy arrays
- * @src: array of elemnts
- * @dest: destination array
- * return: dest
+ * _strcpy  - copy arrays ina string in the given parameter
+ * @src: array of elements
+ * @dest: destination of the array
+ *
+ * Return: always dest
  */
 
 char *_strcpy(char *dest, char *src)
@@ -43,16 +47,17 @@ char *_strcpy(char *dest, char *src)
 
 
 /**
- * _strdup - arrays for printing a string
+ * _strdup - copies the string given as  a parameter
  * @str: array of elements
- * Return: pointer
+ *
+ * Return: always NULL on success
  *
  */
 
 char *_strdup(char *str)
 {
 	char *dst;
-	unsigned int sze;
+	unsigned int size;
 
 	if (str == 0)
 	{
@@ -61,7 +66,7 @@ char *_strdup(char *str)
 
 	size = _strlen(str) + 1;
 
-	dst = (char *) malloc(size *sizeof(char));
+	dst = (char *) malloc(size * sizeof(char));
 
 	if (dst == 0)
 	{
