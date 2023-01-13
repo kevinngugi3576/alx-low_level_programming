@@ -4,6 +4,20 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - calculates the length of string
+ * @string: string
+ * Return: string length
+ */
+int _strlen(char *string)
+{
+	int i;
+
+	for (i = 0; string[i] != '\0'; i++)
+		;
+
+		return (1);
+}
+/**
  * string_ncontact  - it concates two strings
  * @s1: first string
  * @s2: second string
@@ -13,42 +27,34 @@
  */
 char *string_ncontact(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
+	char *ptr;
+	int num, len, i, j;
+
+	num = n;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
+	if (num < 0)
+		return (NULL);
+	if (num >= _strlen(s2))
+		num = _strlen(s2);
 
-	while (s1[size1] != '\0')
-	{
-		size1++;
-	}
+	len = _strlen(s1) + num + 1;
 
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
+	ptr = malloc(sizeof(*ptr) * len);
 
-	if (n > size2)
-		n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
 
-	if (p == NULL)
-		return (0);
+	for (i = 0; s1[i] != '\0'; i++)
+		ptr[i] = s1[i];
+	for (j = 0; j < num; j++)
+		ptr[i + j] = s2[j];
 
-	for (i = 0; i < size1; i++)
-	{
-		p[i] = s1[i];
-	}
+	ptr[i + j] = '\0';
 
-	for (; i < (size1 + n); i++)
-	{
-		p[i] = s2[i - size1];
-	}
-	p[i] = '\0';
-
-	return (p);
+	return (ptr);
 }
+

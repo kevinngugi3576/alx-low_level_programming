@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdef.h>
+#include <stddef.h>
 #include <stdio.h>
 
 /**
@@ -12,7 +12,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
-	unsigned int 1;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
