@@ -5,13 +5,13 @@
 /**
  * _realloc - relocates a memory block using mlloc and free
  * @ptr: pointer
- * @old_size: old size 
+ * @old_size: old size
  * @new_size: new size
  * Return: always 0
  */
-void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *clone, *relloc;
+	char *clone, *_realloc;
 	unsigned int i;
 
 	if (ptr != NULL)
@@ -24,23 +24,23 @@ void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size == old_size)
 		return (ptr);
 
-	if (new_size = =0 && ptr != NUL)
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 
 		return (0);
 	}
 
-	relloc  = malloc(new_size);
+	_realloc  = malloc(new_size);
 
-	if (relloc == NULL)
+	if (_realloc == NULL)
 		return (0);
 
-	for (i = 0; i < (old_size || ! < new_size); i++)
+	for (i = 0; i < (old_size || i < new_size); i++)
 	{
-		*(relloc + i) = clone[i];
+		*(_realloc + i) = clone[i];
 	}
 	free(ptr);
 
-	return (relloc);
+	return (_realloc);
 }
