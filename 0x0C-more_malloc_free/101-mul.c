@@ -8,7 +8,7 @@
  * @argv: arguements
  * Return: always 0
  */
-int main(int rgc, chr *argv[])
+int main(int argc, char *argv[])
 {
 	unsigned long mul;
 	int i, j;
@@ -21,7 +21,7 @@ int main(int rgc, chr *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j+=)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] > 57 || argv[i][j] < 48)
 			{
@@ -30,9 +30,8 @@ int main(int rgc, chr *argv[])
 			}
 
 		}
-		mul = atol(argv[1]) *atol(argv[2]);
+		mul = atol(argv[1]) * atol(argv[2]);
 		printf("%lu\n", mul);
 	}
-	
 	return (0);
 }
