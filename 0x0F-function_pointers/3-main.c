@@ -5,13 +5,13 @@
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Returns: always 0 on success
+ * Return: always 0 on success
  */
-int main(int argc, chr *argv[])
+int main(int argc, char *argv[])
 {
 	int arg1, arg2, result;
-	char o;
 	int (*func)(int, int);
+	char o;
 
 	if (argc != 4)
 	{
@@ -32,7 +32,7 @@ int main(int argc, chr *argv[])
 
 	o = *argv[2];
 
-	if ((0 == '/' || 0 == '%') && arg2 == 0)
+	if ((o == '/' || o == '%') && arg2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
@@ -44,4 +44,3 @@ int main(int argc, chr *argv[])
 
 	return (0);
 }
-	 
