@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "executable_start.h"
 
 
+extern char __executable_start;
 
 /**
  * main - prints its own codes
