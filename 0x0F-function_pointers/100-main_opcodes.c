@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints its own opcodes 
+ * main - prints its own codes
  * @argc: number of arguments
  * @argv: array of arguements
  * Return: always 0
  */
-int main(int rgc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int bytes, i;
 	char *arr;
 
-	if (argc !+ 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
@@ -19,7 +19,7 @@ int main(int rgc, char *argv[])
 
 	byetes = atoi(argv[1]);
 
-	if (bytes < 0 )
+	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
@@ -27,7 +27,7 @@ int main(int rgc, char *argv[])
 
 	arr = (char *)main;
 
-	for (i = 0; 1 < bytes; i++)
+	for (i = 0; bytes < 1; i++)
 	{
 		if (i == bytes - 1)
 		{
