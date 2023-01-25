@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
-extern char __executable_start;
+#include <stdarg.h>
 
 /**
  * main - prints its own codes
@@ -12,8 +10,8 @@ extern char __executable_start;
  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *arr;
+	int bytes;
+	int i;
 
 	if (argc != 2)
 	{
@@ -28,18 +26,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-
-	arr = &__executable_start;
-
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
 		{
-			printf("%02x\n", arr[i]);
-			break;
+			printf("%02x\n", i);
 		}
-
-		printf("%02x ", (unsigned int)arr[i]);
+		printf("\n");
 	}
 
 	return (0);
