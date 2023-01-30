@@ -1,25 +1,23 @@
-section.data
-
-message db 'Hello, Holberton', 0
+extern printf
 
 section .text
 
-global_start
+global main
 
-_start:
+main:
 
-; call the printf function
+push rbp
 
-mov rdi, message
-
-xor rax, rax
-
+mov rdi,fmt
+mov rsi,msg
+mov rax,0
 call printf
 
-; exit the program
+pop rbp
 
-mov rax, 60
+mov rax,0
+ret
 
-xor rdi, rdi
-
-syscall
+section .data
+msg: db "Hello, Holberton", 0
+fmt: db "%s", 10, 0
