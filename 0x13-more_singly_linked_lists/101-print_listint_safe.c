@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+size_t looped_lisint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
 /**
  * looped_listint_len - counts the number of unique
  * nodes in alooped listint_t list
