@@ -3,7 +3,7 @@
 /**
  * get_endiannes - checks the endlannes of the function
  *
- * Return: if big endian 0 if little - endian 0
+ * Return: if big endian 0 if little - endian 1
  */
 int get_endiannes(void)
 {
