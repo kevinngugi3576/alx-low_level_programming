@@ -1,1 +1,1 @@
-bit manipulation
+Bit manipulation
