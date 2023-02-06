@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * get_bit - gets the value of a bit ata agiven index
  * @n: The bit
@@ -11,6 +10,8 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	if (index >= (sizeof(unsigned long int) * 8))
+		return (0);
+	if ((n & (1 << index)) == 0)
 		return (0);
 
 	return (1);
