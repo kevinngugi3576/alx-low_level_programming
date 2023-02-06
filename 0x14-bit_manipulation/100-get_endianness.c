@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_endlannes - checks the endlannes
+ * get_endiannes - checks the endlannes of the function
  *
  * Return: if big endian 0 if little - endian 0
  */
